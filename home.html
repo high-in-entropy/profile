@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8" />
+  <link rel='icon' type='image/jpg' href='icon.jpg' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="average building enjoyer, netrunning enthusiast" />
+  <title>mani's lair</title>
+  <style>
+    body {
+      width: 650px;
+      margin: auto;
+      margin-top: 15vh;
+      font-family: Consolas, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier New;
+      margin-bottom: 20vh;
+      line-height: 1.2em;
+      background-color: black;
+      color: white;
+    }
+    body a { color: dodgerblue; }
+    body .thread { color: dodgerblue; text-decoration: none; }
+    body .thread:hover { text-decoration: underline; }
+    body hr { border: 2.5px dotted white; }
+    body p:not(:nth-child(2)) { margin-top: 30px; }
+    body p:nth-child(2) { margin-top: 0px; }
+    body h3:first-child { margin-bottom: 5px; }
+    body h4 { margin-top: 30px; }
+    body h5 { margin: 0px; font-weight: 100; }
+    @media only screen and (max-width: 650px) { 
+      body { width: 90vw !important; } 
+    }
+    .collapsible {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.5em;
+      font-family: Consolas, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier New;
+    }
+    .collapsible::after {
+      content: '\25B2'; /* Unicode character for upward arrow */
+      font-size: 1.5em;
+      float: right;
+    }
+    .active::after {
+      content: '\25BC'; /* Unicode character for downward arrow */
+    }
+    .content {
+      padding: 0 18px;
+      display: block; /* Closed by default */
+      overflow: hidden;
+      background-color: black;
+      font-family: Consolas, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier New;
+    }
+    .active .content {
+      display: block; /* Open when parent .collapsible has .active class */
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h3>Viraj Mohile</h3>
+    <p>deep learning | cloud engineering | edge ai</p>
+    <hr />
+    
+    <button class="collapsible">Professional Experience</button>
+    <div class="content">
+      <ul>
+      	&nbsp;--------------------<br>
+        &nbsp;Deloitte Consulting&nbsp;<br>
+        &nbsp;--------------------<br><br>
+        <li>blah blah</li><br>
+      </ul>
+    </div>
+
+    <button class="collapsible">Education</button>
+    <div class="content">
+      <ul>
+      	&nbsp;----------------------------------------------<br>
+        &nbsp;National Institute of Technology, Surat, India&nbsp;<br>
+        &nbsp;---------------------------------------------- <br><br>
+        <li>blah blah</li>
+        <li>lorem ipsum blah</li><br>
+      </ul>
+    </div>
+
+    
+
+    <button class="collapsible">Projects</button>
+    <div class="content">
+      <p><!-- Add your project information here --></p>
+    </div>
+    
+  </main>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
